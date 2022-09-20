@@ -3,10 +3,10 @@
 # Project Update
 With this project we shift from a monolith service to microservice.
 
-Udagram-api contained the backend for feed and user access. With making it a microservice, we split the two functionalities and using a reverseproxy, the frontend accesses one endpoint which routes to respective API.Check udagram-reverseproxy.
+Udagram-api(monolith) contained the backend for feed and user access. With making it a microservice, we split the two functionalities and using a reverseproxy, the frontend accesses one endpoint which routes to respective API.Check udagram-reverseproxy.
 
 Docker compose runs the dockerfiles in each API:udagram-api-users, udagram-api-feed,udagram-frontend and udagram-reverseproxy.
-
+ 
 
 Udagram is a simple cloud application developed alongside the Udacity Cloud Engineering Nanodegree. It allows users to register and log into a web client, post photos to the feed, and process photos using an image filtering microservice.
 
