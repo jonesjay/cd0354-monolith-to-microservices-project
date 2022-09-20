@@ -84,3 +84,9 @@ Launch the frontend app locally.
     ```
 4. `set_env.sh` is really for your backend application. Frontend applications have a different notion of how to store configurations. Configurations for the application endpoints can be configured inside of the `environments/environment.*ts` files.
 5. In `set_env.sh`, environment variables are set with `export $VAR=value`. Setting it this way is not permanent; every time you open a new terminal, you will have to run `set_env.sh` to reconfigure your environment variables. To verify if your environment variable is set, you can check the variable with a command like `echo $POSTGRES_USERNAME`.
+
+With this project we shift from a monolith service to microservice.
+
+Udagram-api contained the backend for feed and user access. With making it a microservice, we split the two functionalities and using a reverseproxy, the frontend accesses one endpoint which routes to respective API.Check udagram-reverseproxy.
+
+Docker compose runs the dockerfiles in each API:udagram-api-users, udagram-api-feed,udagram-frontend and udagram-reverseproxy.
